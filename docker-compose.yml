@@ -29,6 +29,6 @@ services:
     volumes:
       - .:/var/www/app
     ports:
-      - "8000:80"
+      - "8000:8080"
     networks:
       - laravel-ecommerce-network
