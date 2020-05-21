@@ -20,7 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/', function () {
-    $product = factory(Product::class)->make()->save();
+//    $product = factory(Product::class)->make()->save();
+    $product = Product::first();
+    $product->name = 'TESTE';
+    $product->save();
 
     dd($product);
 });
