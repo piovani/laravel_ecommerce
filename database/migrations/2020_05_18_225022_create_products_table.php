@@ -12,6 +12,7 @@ class CreateProductsTable extends Migration
             $table->uuid('id');
             $table->string('name');
             $table->decimal('value', 20, 2)->default(0);
+            $table->integer('stock')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
